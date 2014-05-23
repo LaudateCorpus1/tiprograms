@@ -1,4 +1,5 @@
 "Pixel perfect collision example - bounces a trail around on the screen"
+"This part sets up the screen and asks for user input"
 ClrHome
 AxesOff
 Output(2,2,"Clear draw?")
@@ -18,6 +19,8 @@ For(L,0,94)
 Pxl-On(0,94-L)
 Pxl-On(62,L)
 End
+
+"The actual trail part of the program"
 randInt(0,62)->Y
 randInt(0,94)->X
 1->D

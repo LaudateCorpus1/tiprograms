@@ -26,8 +26,6 @@ As you might notice some of the programs inside of this repository are quite sim
 
 **[Catlinman](http://catlinman.com/)** <br/>
 
-**[Jokler](https://twitter.com/jokler13)** <br/>
-
 ## Licence ##
 
 This repository is released under the MIT license. For more information please refer to [LICENSE.md](https://github.com/Catlinman/TiPrograms/blob/master/LICENSE.md)
