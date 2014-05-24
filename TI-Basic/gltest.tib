@@ -1,0 +1,27 @@
+"3D Drawing Test"
+0->X
+1->Z
+1->S
+1->K
+While 1
+If K!=0:Then
+If K=25:Z+S/8->Z
+If K=34:Z-S/8->Z
+If K=24:X-(SZ)->X
+If K=26:X+(SZ)->X
+ClrDraw
+Line((7.5+X)Z,5Z,Z,Z)
+Line((7.5+X)Z,-5Z,Z,-Z)
+Line((-7.5+X)Z,5Z,-Z,Z)
+Line((-7.5+X)Z,-5Z,-Z,-Z)
+Line((7.5+X)Z,5Z,(-7.5+X)Z,5Z)
+Line((7.5+X)Z,-5Z,(-7.5+X)Z,-5Z)
+Line((7.5+X)Z,-5Z,(7.5+X)Z,-5Z)
+Line((-7.5+X)Z,5Z,(-7.5+X)Z,-5Z)
+Line(Z,Z,Z,-Z)
+Line(Z,Z,-Z,Z)
+Line(-Z,-Z,-Z,Z)
+Line(-Z,-Z,Z,-Z)
+End
+getKey->K
+End

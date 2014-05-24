@@ -1,0 +1,9 @@
+"Linear interpolation"
+ClrHome
+Input "Start:",A
+Input "End:",B
+Input "Precision:",C
+Repeat A=B
+A+(B-A)C->A
+Disp A
+End
