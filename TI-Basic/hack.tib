@@ -1,0 +1,84 @@
+Disp "READY FOR INPUT"
+Input "ENTER DIGITS:",S
+Disp "LOADING..."
+100->E
+prgmDELAY
+Disp "BOOTING HACK"
+75->E
+prgmDELAY
+If S<1:1->S
+If S>16:16->S
+int((16-S)/2)->B
+S->dim(LA)
+S->dim(LB)
+Fill(0,LA)
+Fill(0,LB)
+1->I
+0->K
+1->G
+1->Q
+1->D
+0->F
+0->X
+0->M
+ClrHome
+While Q
+If F>0:F+1->F
+If F=3:Then
+ClrHome
+1->D
+0->F
+End
+If D:Then
+randInt(0,9)->H
+Output(6,5,"TRACE:")
+Output(6,12,H)
+0->D
+Output(3,I+B,"^")
+End
+If LA(I)=H:M+1->M
+For(J,1,S)
+If not(D) and not(F) and LB(J)!=1:Then
+randInt(0,9)->R
+R->LA(J)
+Output(2,J+B,R)
+Else
+If LB(J)=1:Output(3,J+B,"")
+End
+End
+getKey->K
+If K!=0:Then
+If LA(I)=H:Then
+If I=S: Then
+Goto C
+End
+1->LB(I)
+I+1->I
+1->D
+Else
+ClrHome
+1->I
+Fill(0, LB)
+Output(2,1,"----------------")
+Output(6,1,"--ERROR--")
+1->F
+X+1->X
+End
+End
+End
+Lbl C
+10->E
+1->D
+While E
+If D:Then
+For(I,1,S)
+Output(3,I+B,"-")
+End
+Output(6,1,"                ")
+Output(5,3,"MISSES:")
+Output(5,12,X)
+Output(6,3,"FAULTS:")
+Output(6,12,M)
+0->D
+End
+End
