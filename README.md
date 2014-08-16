@@ -1,10 +1,9 @@
-TiPrograms
-==========
+# TiPrograms #
 
 Repository containing programs written for Texas-Instruments calculators.
 
 ## How to compile and syntax check the programs ##
-The programs inside of this repository were mostly taken from our own calculators and rewritten into a text file. This means that all of the .tib files in this repository are simply the TI-Basic code you would fine on your calculator which would then when run be converted into raw hex.
+The programs inside of this repository were mostly taken from our own calculators and rewritten into a text file. This means that all of the *.tib* files in this repository are simply the TI-Basic code you would fine on your calculator which would then when run be converted into raw hex.
 
 To compile these programs you should take a look at tools such as the [TI-83 Plus/TI-84 Plus Online Programming IDE](http://www.cemetech.net/sc/) or the [TI-Basic Compiler](http://sourceforge.net/projects/tibasic/). As you may see we have maintain the structure of our code's syntax close to that of the online IDE to avoid conflicts when compiling or test checking the code.
 
@@ -24,8 +23,8 @@ As you might notice some of the programs inside of this repository are quite sim
 
 ## Collaborators ##
 
-**[Catlinman](http://catlinman.com/)** <br/>
+**[Catlinman](http://catlinman.com/)**
 
 ## Licence ##
 
-This repository is released under the MIT license. For more information please refer to [LICENSE.md](https://github.com/Catlinman/TiPrograms/blob/master/LICENSE.md)
+This repository is released under the MIT license. For more information please refer to [LICENSE](https://github.com/Catlinman/TiPrograms/blob/master/LICENSE)
