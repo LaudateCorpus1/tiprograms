@@ -1,0 +1,31 @@
+"Fragment shader system"
+
+// prgmFragment
+ClrHome
+Input "Size x:", W
+Input "Size y:", H
+max(8, min(94, W)) -> W
+max(8, min(94, H)) -> H
+
+ClrDraw
+AxesOff
+Trace
+0 -> X
+X -> Y
+Y -> V
+
+For(Y, 0, H)
+	For(X, 0, W)
+		0 -> V
+		prgmShader
+		If V: Pxl-On(Y, X)
+	End
+End
+
+"Base circle shader"
+// prgmShader
+(min(W, H) / 2) -> R
+(W/2)-X -> A
+(H/2)-Y -> B
+sqrt(A^2 + B^2) -> D
+int(R / max(0.1, D)) -> V

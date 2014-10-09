@@ -1,36 +1,37 @@
 "Pixel perfect collision example - bounces a trail around on the screen"
 "This part sets up the screen and asks for user input"
+
 ClrHome
 AxesOff
-Output(2,2,"Clear draw?")
-Output(4,2,"1 = Yes")
-Output(5,2,"3 = No")
-0->G
-While G!=92 and G!=94
-getKey->G
-If G=92:ClrDraw
+Output(2, 2, "Clear draw?")
+Output(4, 2, "1 = Yes")
+Output(5, 2, "3 = No")
+0 -> G
+While G != 92 and G != 94
+	getKey -> G
+	If G = 92: ClrDraw
 End
 ClrHome
-For(L,0,62)
-Pxl-On(L,0)
-Pxl-On(62-L,94)
+For(L, 0, 62)
+	Pxl-On(L, 0)
+	Pxl-On(62 - L, 94)
 End
-For(L,0,94)
-Pxl-On(0,94-L)
-Pxl-On(62,L)
+For(L, 0, 94)
+	Pxl-On(0, 94 - L)
+	Pxl-On(62, L)
 End
 
-"The actual trail part of the program"
-randInt(0,62)->Y
-randInt(0,94)->X
-1->D
--1->E
+"The actual trail collider part of the program"
+randInt(0, 62) -> Y
+randInt(0, 94) -> X
+1 -> D
+-1 -> E
 Repeat getKey
-If pxl-Test(max(1,min(62,Y+E)),X):-E->E
-If pxl-Test(Y,max(1,min(94,X+D))):-D->D
-If D=0:1->D
-If E=0:1->E
-max(min(X+D,94),1)->X
-max(min(Y+E,62),1)->Y
-Pxl-On(Y,X)
+	If pxl-Test(max(1, min(62, Y + E)), X): -E -> E
+	If pxl-Test(Y, max(1, min(94, X + D))): -D -> D
+	If D=0: 1 -> D
+	If E=0: 1 -> E
+	max(min(X + D, 94), 1) -> X
+	max(min(Y + E, 62), 1) -> Y
+	Pxl-On(Y, X)
 End
