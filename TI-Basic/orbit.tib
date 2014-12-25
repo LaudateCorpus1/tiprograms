@@ -1,0 +1,53 @@
+"Orbit"
+
+Input "Smoothing:", S
+Input "Distance:", Z
+0 -> Xmin
+14 -> Xmax
+0 -> Ymin
+10 -> Ymax
+14 -> Xscl
+10 -> Yscl
+randInt(0, 14) -> A
+randInt(0, 10) -> B
+A -> C
+B -> D
+C -> E
+D -> F
+E -> G
+F -> H
+G -> I
+H -> J
+randInt(-100, 100) / 100 -> X
+randInt(-100, 100) / 100 -> Y
+randInt(2, 12) -> K
+randInt(1, 9) -> L
+Trace
+ClrDraw
+Line(K, L, K, L)
+Repeat getKey
+	X + (((K - A) - X) * (1 / S)) -> X
+	Y + (((L - B) - Y) * (1 / S)) -> Y
+	Line(G, H, I, J, 0)
+	G -> I
+	H -> J
+	E -> G
+	F -> H
+	C -> E
+	D -> F
+	A -> C
+	B -> D
+	If A + X < 0 or A + X > 14: -X -> X
+	If B + Y < 0 or B + Y > 10: -Y -> Y
+	max( min(A, 13.9), 0.1) -> A
+	max( min(B, 9.9), 0.1) -> B
+	A + X -> A
+	B + Y -> B
+	Line(A, B, C, D, 1)
+	If ((K - A)^2) + ((L - B)^2) < Z: Then
+		Line(K, L, K, L, 0)
+		randInt(2, 12) -> K
+		randInt(1, 9) -> L
+		Line(K, L, K, L)
+	End
+End

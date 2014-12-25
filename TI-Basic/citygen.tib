@@ -1,0 +1,29 @@
+"City Outline Generator"
+
+0 -> A
+A -> B
+B -> C
+C -> D
+ClrHome
+Input "Length:", L
+Input "Precision:", P
+AxesOff
+ZStandard
+ClrDraw
+Trace
+While 1
+	If randInt(0, 1): Then
+		A + (randInt(-L, L) / P) -> A
+	Else
+		B + (randInt(-L, L) / P) -> B
+	End
+	Line(C, D, A, B)
+	A -> C
+	B -> D
+	If A > 10 or A < -10 or B > 10 or B < -10: Then
+		0 -> A
+		A -> B
+		B -> C
+		C -> D
+	End		
+End

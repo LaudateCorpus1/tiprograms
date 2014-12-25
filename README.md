@@ -25,6 +25,6 @@ As you might notice some of the programs inside of this repository are quite sim
 
 **[Catlinman](http://catlinman.com/)**
 
-## Licence ##
+## License ##
 
 This repository is released under the MIT license. For more information please refer to [LICENSE](https://github.com/Catlinman/TiPrograms/blob/master/LICENSE)

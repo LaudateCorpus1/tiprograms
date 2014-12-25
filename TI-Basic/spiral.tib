@@ -1,0 +1,28 @@
+"Spiral"
+
+ClrDraw
+Trace
+ZStandard
+AxesOff
+0 -> A
+A -> B
+B -> F
+F -> G
+0.05 -> D
+0 -> T
+ClrHome
+Input "Step speed:", S
+Input "Growth:", E
+-1 -> R
+While R != 0 and R != 1
+	Input "Double? (0/1):", R
+End
+While 1
+	T + S -> T
+	cos(T) * (D * (T * E)) -> A
+	sin(T) * (D * (T * E)) -> B
+	Line(F, G, A, B)
+	If R:Line(-F, -G, -A, -B)
+	A -> F
+	B -> G
+End
