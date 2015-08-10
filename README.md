@@ -21,10 +21,6 @@ It is possible to emulate the programs in this repository on Windows. Please kee
 
 As you might notice some of the programs inside of this repository are quite simple. The reason for this is that we have decided to include all of our programs for the sake of allowing newcomers to TI-Basic programming to be able to start off with more minor and simple programming tasks. At the same time these programs are more meant as examples for how little code can be used to achieve a desired programmable goal on a TI calculator.
 
-## Collaborators ##
-
-**[Catlinman](http://catlinman.com/)**
-
 ## License ##
 
-This repository is released under the MIT license. For more information please refer to [LICENSE](https://github.com/Catlinman/TiPrograms/blob/master/LICENSE)
+This repository is released under the MIT license. For more information please refer to [LICENSE](https://github.com/catlinman/tiprograms/blob/master/LICENSE)
